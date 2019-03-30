@@ -90,7 +90,7 @@ class SmoothPicker extends Component {
         key={index}
         onLayout={({ nativeEvent: { layout } }) => {
           this._save(index, layout, item, horizontal);
-          if (this.countItems === data.length) {
+          if (this.countItems + 1 === data.length) {
             this.countItems = 0;
             this._alignAfterMount();
           }else{
